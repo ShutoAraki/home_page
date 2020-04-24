@@ -4,8 +4,8 @@ const katex = require('rehype-katex');
 module.exports = {
     title: 'Shuto Araki',
     tagline: 'Shuto\'s Personal Website',
-    url: 'https://shutoaraki.com',
-    baseUrl: '/',
+    url: 'https://shutoaraki.github.io/',
+    baseUrl: '/home_page/',
     favicon: 'img/favicon.ico',
     organizationName: 'ShutoAraki',
     projectName: 'home_page',
