@@ -8,7 +8,7 @@ module.exports = {
     baseUrl: '/',
     favicon: 'img/favicon.ico',
     organizationName: 'ShutoAraki',
-    projectName: 'shutoaraki_home_page',
+    projectName: 'home_page',
     themeConfig: {
         navbar: {
             title: 'Shuto Araki',
