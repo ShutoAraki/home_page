@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+// import Birds from './components/NetworkAnimation';
 
 const features = [
   {
@@ -63,7 +64,8 @@ function Home() {
                  "MLOps Engineer",
                  "AWS Solutions Architect",
                  "Quantum Computing Enthusiast"];
-  
+
+  // Timing for the subtitle
   useEffect(() => {
     const timer = setInterval(() => {
         setIndex(t => (t + 1) % texts.length);
@@ -71,11 +73,27 @@ function Home() {
     // Clear timeout if the component is unmounted
     return () => clearInterval(timer);
   }, []);
+
+  // useScript
+  // useEffect(() => {
+  //   const script = document.createElement('script');
+  
+  //   script.src = "three.r119.min.js";
+  //   script.async = true;
+  
+  //   document.body.appendChild(script);
+  
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   }
+  // }, []);
+
   return (
     <Layout
       title={siteConfig.title}
       description="Description will go into a meta tag in <head />">
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
+        <script src="three.r119.min.js"></script>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">Solutions Architect at Amazon Web Services</p>
