@@ -67,6 +67,9 @@ module.exports = {
                     rehypePlugins: [katex],
                 },
                 blog: {
+                    sidebarPath: require.resolve('./sidebars.js'),
+                    postsPerPage: 3,
+                    showLastUpdateTime: true,
                     remarkPlugins: [math],
                     rehypePlugins: [katex],
                 },
