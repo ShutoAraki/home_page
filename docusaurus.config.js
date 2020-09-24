@@ -14,14 +14,9 @@ module.exports = {
             title: 'Shuto Araki',
             logo: {
                 alt: 'My Site Logo',
-                src: 'img/logo.svg',
+                src: 'img/newLogo.png',
             },
-            links: [{
-                    to: 'docs/doc1',
-                    activeBasePath: 'docs',
-                    label: 'Docs',
-                    position: 'left',
-                },
+            links: [
                 { to: 'blog', label: 'Blog', position: 'left' },
                 {
                     href: 'https://github.com/ShutoAraki/home_page',
@@ -32,29 +27,18 @@ module.exports = {
         },
         footer: {
             style: 'dark',
-            links: [{
-                    title: 'Docs',
-                    items: [{
-                            label: 'Style Guide',
-                            to: 'docs/doc1',
-                        },
-                        {
-                            label: 'Second Doc',
-                            to: 'docs/doc2',
-                        },
-                    ],
-                },
+            links: [
                 {
-                    title: 'Community',
+                    title: 'Professional',
                     items: [{
-                            label: 'Stack Overflow',
-                            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                            label: 'GitHub',
+                            href: 'https://github.com/ShutoAraki',
                         },
                         {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus',
-                        },
-                    ],
+                            label: 'LinkedIn',
+                            href: 'https://www.linkedin.com/in/shuto-araki/'
+                        }
+                    ]
                 },
                 {
                     title: 'Social',
@@ -63,17 +47,13 @@ module.exports = {
                             to: 'blog',
                         },
                         {
-                            label: 'GitHub',
-                            href: 'https://github.com/ShutoAraki',
-                        },
-                        {
                             label: 'Twitter',
                             href: 'https://twitter.com/ShutoAraki',
                         },
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} Shuto Araki. Built with Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Shuto Araki. All rights reserved.`,
         },
     },
     presets: [

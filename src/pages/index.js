@@ -64,15 +64,15 @@ function Home() {
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <p className="hero__subtitle">Solutions Architect at Amazon Web Services specializing in Machine Learning and Quantum Computing</p>
           <div className={styles.buttons}>
             <Link
               className={classnames(
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('pdfs/resume.pdf')}>
-              Check out my resume! 
+              to="http://d115g589pva9pr.cloudfront.net/ShutoArakiResume_Oct2019.pdf">
+              Check out my resume!
             </Link>
           </div>
         </div>
