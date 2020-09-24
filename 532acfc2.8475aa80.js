@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{115:function(o){o.exports=JSON.parse('{"allTagsPath":"/home_page/blog/tags","slug":"chaos-theory","name":"chaos theory","count":1,"permalink":"/home_page/blog/tags/chaos-theory"}')}}]);

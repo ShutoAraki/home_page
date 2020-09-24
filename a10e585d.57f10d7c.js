@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{122:function(o){o.exports=JSON.parse('{"allTagsPath":"/home_page/blog/tags","slug":"book-review","name":"book review","count":1,"permalink":"/home_page/blog/tags/book-review"}')}}]);

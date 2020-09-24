@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{123:function(o){o.exports=JSON.parse('{"allTagsPath":"/home_page/blog/tags","slug":"economics","name":"economics","count":2,"permalink":"/home_page/blog/tags/economics"}')}}]);

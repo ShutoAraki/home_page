@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{101:function(o){o.exports=JSON.parse('{"allTagsPath":"/home_page/blog/tags","slug":"complexity-theory","name":"complexity theory","count":2,"permalink":"/home_page/blog/tags/complexity-theory"}')}}]);
