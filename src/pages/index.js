@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import ReactTextTransition, { presets } from 'react-text-transition';
 
 const features = [
   {
@@ -57,6 +58,20 @@ function Feature({imageUrl, title, description}) {
 function Home() {
   const context = useDocusaurusContext();
   const {siteConfig = {}} = context;
+  const [textIndex, setIndex] = useState(0);
+  const texts = ["Data Scientist",
+                 "Machine Learning Engineer",
+                 "DevOps Engineer",
+                 "MLOps Engineer",
+                 "AWS Solutions Architect",
+                 "Quantum Computing Enthusiast"];
+
+  useEffect(() => {
+    setInterval(() => {
+      setIndex(textIndex + 1)
+    }, 1000);
+  });
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
@@ -65,6 +80,14 @@ function Home() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">Solutions Architect at Amazon Web Services specializing in Machine Learning and Quantum Computing</p>
+          <p className="hero__subtitle">I am a 
+            <ReactTextTransition
+              text={texts[textIndex % texts.length]}
+              spring={presets.gentle}
+              style={{ margin: "0 6px" }}
+              inline
+            />
+          </p>
           <div className={styles.buttons}>
             <Link
               className={classnames(
