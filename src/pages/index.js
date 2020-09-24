@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
-// import ReactTextTransition, { presets } from 'react-text-transition';
 
 const features = [
   {
@@ -64,13 +63,14 @@ function Home() {
                  "MLOps Engineer",
                  "AWS Solutions Architect",
                  "Quantum Computing Enthusiast"];
-
+  
   useEffect(() => {
-    setInterval(() => {
-      setIndex(textIndex + 1)
-    }, 4000);
-  });
-
+    const timer = setInterval(() => {
+        setIndex(t => (t + 1) % texts.length);
+    }, 1000);
+    // Clear timeout if the component is unmounted
+    return () => clearInterval(timer);
+  }, []);
   return (
     <Layout
       title={siteConfig.title}
@@ -78,15 +78,8 @@ function Home() {
       <header className={classnames('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">Solutions Architect at Amazon Web Services specializing in Machine Learning and Quantum Computing</p>
-          <p className="hero__subtitle">I am a {texts[textIndex % texts.length]}
-            {/* <ReactTextTransition
-              text={texts[textIndex % texts.length]}
-              spring={presets.gentle}
-              style={{ margin: "0 6px" }}
-              inline
-            /> */}
-          </p>
+          <p className="hero__subtitle">Solutions Architect at Amazon Web Services</p>
+          <p className="hero__subtitle">I am a {texts[textIndex]}</p>
           <div className={styles.buttons}>
             <Link
               className={classnames(
